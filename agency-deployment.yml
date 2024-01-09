@@ -46,7 +46,7 @@ spec:
             value: "true"
           
           - name: "SPRING_CONFIG_IMPORT"
-            value: "optional:configserver:http://config@secret@config-server.prod"
+            value: "optional:configserver:http://config:secret@config-server.prod"
 
         resources:
           limits:
