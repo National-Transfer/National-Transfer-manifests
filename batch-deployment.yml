@@ -18,17 +18,17 @@ spec:
         image: redahimmi/national-transfer-batch-service
         env:
           - name: "SPRING_DATASOURCE_URL"
-            value: "jdbc:mysql://national-transfer.mysql.database.azure.com/batchDB"
+            value: "jdbc:mysql://national-transfer.mysql.database.azure.com:3306/batchDB"
           - name: "SPRING_DATASOURCE_USERNAME"
             valueFrom:
               secretKeyRef:
-                key: db-credentials
-                value: SPRING_DATASOURCE_USERNAME 
+                name: db-credentials
+                key: SPRING_DATASOURCE_USERNAME 
           - name: "SPRING_DATASOURCE_PASSWORD"
             valueFrom:
               secretKeyRef:
-                key: db-credentials
-                value: SPRING_DATASOURCE_PASSWORD
+                name: db-credentials
+                key: SPRING_DATASOURCE_PASSWORD
 
           - name: "EUREKA_CLIENT_ENABLED"
             value: "false"
