@@ -18,7 +18,7 @@ spec:
         image: redahimmi/national-transfer-transfer-service
         env:
           - name: "SPRING_DATASOURCE_URL"
-            value: "jdbc:mysql://national-transfer.mysql.database.azure.com/notificationDB"
+            value: "jdbc:mysql://national-transfer.mysql.database.azure.com:3306/transferDB"
           - name: "SPRING_DATASOURCE_USERNAME"
             valueFrom:
               secretKeyRef:
