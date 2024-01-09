@@ -20,7 +20,7 @@ spec:
     - http:
         paths:
           - pathType: Prefix
-            path: "/account-service/**"
+            path: "/account-service"
             backend:
               service:
                 name: account-service
