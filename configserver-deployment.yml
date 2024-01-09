@@ -4,7 +4,7 @@ metadata:
   name: config
   namespace: prod
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: config
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: config
-        image: redahimmi/national-transfer-config-server
+        image: redahimmi/national-transfer-config-server:latest
 
         resources:
           limits:
