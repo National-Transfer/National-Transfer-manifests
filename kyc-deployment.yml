@@ -18,7 +18,7 @@ spec:
         image: redahimmi/national-transfer-kyc-service
         env:
           - name: "SPRING_DATASOURCE_URL"
-            value: "jdbc:mysql://national-transfer.mysql.database.azure.com:3306/gabDB"
+            value: "jdbc:mysql://national-transfer.mysql.database.azure.com:3306/customerDB"
           - name: "SPRING_DATASOURCE_USERNAME"
             valueFrom:
               secretKeyRef:
