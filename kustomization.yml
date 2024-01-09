@@ -4,6 +4,7 @@ kind: Kustomization
 # - gab-service.yml
 resources:
 - account-deployment.yml
+# - discoveryserver.yml
 - account-service.yml
 - agency-deployment.yml
 - agency-service.yml
