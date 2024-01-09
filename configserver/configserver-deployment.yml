@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: config
+  namespace: prod
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: config
+  template:
+    metadata:
+      labels:
+        app: config
+    spec:
+      containers:
+      - name: config
+        image: redahimmi/national-transfer-config-server
+
+        resources:
+          limits:
+            memory: "500Mi"
+            cpu: "200m"
+        imagePullPolicy: Always
+        readinessProbe:
+          httpGet:
+            path: /actuator/health/readiness
+            port: 8090
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /actuator/health/liveness
+            port: 8090
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        ports:
+        - containerPort: 8090

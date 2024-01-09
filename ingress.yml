@@ -1,0 +1,35 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress
+  namespace: prod
+  annotations:
+    kubernetes.io/ingress.class: "external-nginx"
+    # cert-manager.io/issuer: "letsencrypt-prod"
+    # nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+    # nginx.ingress.kubernetes.io/ssl-redirect: "true"
+spec:
+  # ingressClassName: external-nginx
+  # tls:
+  #   - hosts:
+  #       - "ai.redahimmi.tech"
+  #     secretName: tls-cert-prod
+      
+  rules:
+    # - host: ai.redahimmi.tech
+    - http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: api-gateway
+                port:
+                  number: 80
+          # - pathType: Prefix
+          #   path: "/api"
+          #   backend:
+          #     service:
+          #       name: backend-service
+          #       port:
+          #         number: 80

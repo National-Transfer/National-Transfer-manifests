@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: charge
+  namespace: prod
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: charge
+  template:
+    metadata:
+      labels:
+        app: charge
+    spec:
+      containers:
+      - name: charge
+        image: redahimmi/national-transfer-charge-service
+        env:
+          - name: "EUREKA_CLIENT_ENABLED"
+            value: "false"
+
+          - name: "SPRING_CLOUD_KUBERNETES_DISCOVERY_ENABLED"
+            value: "true"
+          
+          - name: "SPRING_CLOUD_KUBERNETES_DISCOVERY_NAMESPACES"
+            value: "prod"
+            
+          - name: "SPRING_CLOUD_KUBERNETES_DISCOVERY_DISCOVERYSERVERURL"
+            value: "http://spring-cloud-kubernetes-discoveryserver.default.svc.cluster.local"
+
+          - name: "SPRING_CLOUD_KUBERNETES_LOADBALANCER_ENABLED"
+            value: "true"
+          
+          - name: "SPRING_CONFIG_IMPORT"
+            value: "optional:configserver:http://config@secret@config-server"
+
+        resources:
+          limits:
+            memory: "500Mi"
+            cpu: "200m"
+        imagePullPolicy: Always
+        readinessProbe:
+          httpGet:
+            path: /actuator/health/readiness
+            port: 8088
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /actuator/health/liveness
+            port: 8088
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        ports:
+        - containerPort: 8088

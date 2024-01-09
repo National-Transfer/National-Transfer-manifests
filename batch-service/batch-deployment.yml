@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: batch
+  namespace: prod
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: batch
+  template:
+    metadata:
+      labels:
+        app: batch
+    spec:
+      containers:
+      - name: batch
+        image: redahimmi/national-transfer-batch-service
+        env:
+          - name: "SPRING_DATASOURCE_URL"
+            value: "jdbc:mysql://national-transfer.mysql.database.azure.com/batchDB"
+          - name: "SPRING_DATASOURCE_USERNAME"
+            valueFrom:
+              secretKeyRef:
+                key: db-credentials
+                value: SPRING_DATASOURCE_USERNAME 
+          - name: "SPRING_DATASOURCE_PASSWORD"
+            valueFrom:
+              secretKeyRef:
+                key: db-credentials
+                value: SPRING_DATASOURCE_PASSWORD
+
+          - name: "EUREKA_CLIENT_ENABLED"
+            value: "false"
+
+          - name: "SPRING_CLOUD_KUBERNETES_DISCOVERY_ENABLED"
+            value: "true"
+          
+          - name: "SPRING_CLOUD_KUBERNETES_DISCOVERY_NAMESPACES"
+            value: "prod"
+            
+          - name: "SPRING_CLOUD_KUBERNETES_DISCOVERY_DISCOVERYSERVERURL"
+            value: "http://spring-cloud-kubernetes-discoveryserver.default.svc.cluster.local"
+
+          - name: "SPRING_CLOUD_KUBERNETES_LOADBALANCER_ENABLED"
+            value: "true"
+          
+          - name: "SPRING_CONFIG_IMPORT"
+            value: "optional:configserver:http://config@secret@config-server"
+
+        resources:
+          limits:
+            memory: "500Mi"
+            cpu: "200m"
+        imagePullPolicy: Always
+        readinessProbe:
+          httpGet:
+            path: /actuator/health/readiness
+            port: 8099
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /actuator/health/liveness
+            port: 8099
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        ports:
+        - containerPort: 8099
