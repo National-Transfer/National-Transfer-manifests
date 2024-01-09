@@ -20,10 +20,10 @@ spec:
     - http:
         paths:
           - pathType: Prefix
-            path: "/account-service"
+            path: "/"
             backend:
               service:
-                name: account-service
+                name: api-gateway
                 port:
                   number: 80
           # - pathType: Prefix

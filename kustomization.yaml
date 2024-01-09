@@ -5,8 +5,8 @@ resources:
 - account-service.yml
 # - agency-deployment.yml
 # - agency-service.yml
-# - api-gateway-deployment.yml
-# - api-gateway-service.yml
+- api-gateway-deployment.yml
+- api-gateway-service.yml
 # - batch-deployment.yml
 # - batch-service.yml
 # - charge-deployment.yml
@@ -14,7 +14,6 @@ resources:
 - configserver-deployment.yml
 - configserver-service.yml
 - databaseSecret.yml
-# - discoveryserver.yml
 # - fraud-deployment.yml
 # - fraud-service.yml
 # - gab-deployment.yml

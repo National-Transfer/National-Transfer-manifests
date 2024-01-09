@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: gateway
-        image: redahimmi/national-transfer-api-gateway
+        image: redahimmi/national-transfer-api-gateway:e09096a2adb82928d3f6309f71680faa12bc092b
         env:
           - name: "EUREKA_CLIENT_ENABLED"
             value: "false"
@@ -40,17 +40,17 @@ spec:
             memory: "500Mi"
             cpu: "200m"
         imagePullPolicy: Always
-        readinessProbe:
-          httpGet:
-            path: /actuator/health/readiness
-            port: 8091
-          initialDelaySeconds: 30
-          periodSeconds: 10
-        livenessProbe:
-          httpGet:
-            path: /actuator/health/liveness
-            port: 8091
-          initialDelaySeconds: 30
-          periodSeconds: 10
+        # readinessProbe:
+        #   httpGet:
+        #     path: /actuator/health/readiness
+        #     port: 8091
+        #   initialDelaySeconds: 30
+        #   periodSeconds: 10
+        # livenessProbe:
+        #   httpGet:
+        #     path: /actuator/health/liveness
+        #     port: 8091
+        #   initialDelaySeconds: 30
+        #   periodSeconds: 10
         ports:
         - containerPort: 8091
