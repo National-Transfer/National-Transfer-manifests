@@ -40,13 +40,13 @@ spec:
             value: "prod"
             
           - name: "SPRING_CLOUD_KUBERNETES_DISCOVERY_DISCOVERYSERVERURL"
-            value: "http://spring-cloud-kubernetes-discoveryserver.default.svc.cluster.local"
+            value: "optional:configserver:http://config:secret@config-server.prod"
 
           - name: "SPRING_CLOUD_KUBERNETES_LOADBALANCER_ENABLED"
             value: "true"
           
           - name: "SPRING_CONFIG_IMPORT"
-            value: "optional:configserver:http://config@secret@config-server"
+            value: "optional:configserver:http://config:secret@config-server.prod"
 
         resources:
           limits:

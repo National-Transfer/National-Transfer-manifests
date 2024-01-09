@@ -7,8 +7,8 @@ resources:
 - agency-service.yml
 - api-gateway-deployment.yml
 - api-gateway-service.yml
-# - batch-deployment.yml
-# - batch-service.yml
+- batch-deployment.yml
+- batch-service.yml
 # - charge-deployment.yml
 # - charge-service.yml
 - configserver-deployment.yml

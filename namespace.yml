@@ -2,5 +2,7 @@ kind: Namespace
 apiVersion: v1
 metadata:
   name: prod
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
   labels:
     name: prod
