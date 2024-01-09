@@ -19,7 +19,7 @@ resources:
 # - fraud-service.yml
 # - gab-deployment.yml
 # - gab-service.yml
-# - ingress.yml
+- ingress.yml
 # - kyc-deployment.yml
 # - kyc-service.yml
 - namespace.yml
