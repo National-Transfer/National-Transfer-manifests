@@ -16,7 +16,7 @@ spec:
       secretName: tls-cert-prod
       
   rules:
-    - host: ai.redahimmi.tech
+    - host: bank.redahimmi.tech
       http:
         paths:
           - pathType: Prefix
