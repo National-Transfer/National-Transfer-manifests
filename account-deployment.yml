@@ -41,7 +41,7 @@ spec:
             value: "prod"
             
           - name: "SPRING_CLOUD_KUBERNETES_DISCOVERY_DISCOVERYSERVERURL"
-            value: "http://spring-cloud-kubernetes-discoveryserver.default.svc.cluster.local"
+            value: "http://spring-cloud-kubernetes-discoveryserver.prod"
 
           - name: "SPRING_CLOUD_KUBERNETES_LOADBALANCER_ENABLED"
             value: "true"
