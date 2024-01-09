@@ -9,24 +9,24 @@ resources:
 - api-gateway-service.yml
 - batch-deployment.yml
 - batch-service.yml
-# - charge-deployment.yml
-# - charge-service.yml
+- charge-deployment.yml
+- charge-service.yml
 - configserver-deployment.yml
 - configserver-service.yml
 - databaseSecret.yml
-# - fraud-deployment.yml
-# - fraud-service.yml
-# - gab-deployment.yml
-# - gab-service.yml
+- fraud-deployment.yml
+- fraud-service.yml
+- gab-deployment.yml
+- gab-service.yml
 - ingress.yml
-# - kyc-deployment.yml
-# - kyc-service.yml
+- kyc-deployment.yml
+- kyc-service.yml
 - namespace.yml
-# - notification-deployment.yml
-# - notification-service.yml
-# - production-issuer.yml
-# - rabbitmq-deployment.yml
-# - rabbitmq-service.yml
-# - staging-issuer.yml
-# - transfer-deployment.yml
-# - transfer-service.yml
+- notification-deployment.yml
+- notification-service.yml
+- production-issuer.yml
+- rabbitmq-deployment.yml
+- rabbitmq-service.yml
+- staging-issuer.yml
+- transfer-deployment.yml
+- transfer-service.yml

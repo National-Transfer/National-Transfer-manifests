@@ -40,31 +40,31 @@ spec:
             value: "prod"
             
           - name: "SPRING_CLOUD_KUBERNETES_DISCOVERY_DISCOVERYSERVERURL"
-            value: "http://spring-cloud-kubernetes-discoveryserver.default.svc.cluster.local"
+            value: "http://spring-cloud-kubernetes-discoveryserver.prod"
 
           - name: "SPRING_CLOUD_KUBERNETES_LOADBALANCER_ENABLED"
             value: "true"
           
           - name: "SPRING_CONFIG_IMPORT"
-            value: "optional:configserver:http://config@secret@config-server"
+            value: "optional:configserver:http://config:secret@config-server.prod"
 
         resources:
           limits:
             memory: "500Mi"
             cpu: "200m"
         imagePullPolicy: Always
-        readinessProbe:
-          httpGet:
-            path: /actuator/health/readiness
-            port: 8084
-          initialDelaySeconds: 30
-          periodSeconds: 10
-        livenessProbe:
-          httpGet:
-            path: /actuator/health/liveness
-            port: 8084
-          initialDelaySeconds: 30
-          periodSeconds: 10
+        # readinessProbe:
+        #   httpGet:
+        #     path: /actuator/health/readiness
+        #     port: 8084
+        #   initialDelaySeconds: 30
+        #   periodSeconds: 10
+        # livenessProbe:
+        #   httpGet:
+        #     path: /actuator/health/liveness
+        #     port: 8084
+        #   initialDelaySeconds: 30
+        #   periodSeconds: 10
         
         ports:
         - containerPort: 8084
