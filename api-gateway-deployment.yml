@@ -3,8 +3,6 @@ kind: Deployment
 metadata:
   name: gateway
   namespace: prod
-  annotations:
-    argocd.argoproj.io/hook: PostSync
 spec:
   replicas: 1
   selector:
