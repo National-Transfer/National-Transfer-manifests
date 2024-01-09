@@ -56,18 +56,18 @@ spec:
             memory: "500Mi"
             cpu: "200m"
         imagePullPolicy: Always
-        # readinessProbe:
-        #   httpGet:
-        #     path: /actuator/health/readiness
-        #     port: 8083
-        #   initialDelaySeconds: 30
-        #   periodSeconds: 10
-        # livenessProbe:
-        #   httpGet:
-        #     path: /actuator/health/liveness
-        #     port: 8083
-        #   initialDelaySeconds: 30
-        #   periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /actuator/health/readiness
+            port: 8083
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /actuator/health/liveness
+            port: 8083
+          initialDelaySeconds: 30
+          periodSeconds: 10
         
         ports:
         - containerPort: 8083
