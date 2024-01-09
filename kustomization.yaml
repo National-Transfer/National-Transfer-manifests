@@ -14,7 +14,7 @@ resources:
 - configserver-deployment.yml
 - configserver-service.yml
 - databaseSecret.yml
-- discoveryserver.yml
+# - discoveryserver.yml
 # - fraud-deployment.yml
 # - fraud-service.yml
 # - gab-deployment.yml
