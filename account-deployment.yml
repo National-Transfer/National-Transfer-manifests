@@ -69,5 +69,5 @@ spec:
         #   initialDelaySeconds: 30
         #   periodSeconds: 10
         
-        # ports:
-        # - containerPort: 8083
+        ports:
+        - containerPort: 8083
