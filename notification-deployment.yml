@@ -47,6 +47,12 @@ spec:
           
           - name: "SPRING_CONFIG_IMPORT"
             value: "optional:configserver:http://config:secret@config-server.prod"
+          
+          - name: "VONAGE_API_KEY"
+            value: "fc7e6383"
+          
+          - name: "VONAGE_API_SECRET"
+            value: "T9u0aHuzgCHOoJaa"
 
         resources:
           limits:
