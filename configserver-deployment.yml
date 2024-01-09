@@ -16,7 +16,7 @@ spec:
       containers:
       - name: config
         image: redahimmi/national-transfer-config-server:latest
-
+        
         resources:
           limits:
             memory: "500Mi"
