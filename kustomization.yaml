@@ -22,7 +22,7 @@ resources:
 # - ingress.yml
 # - kyc-deployment.yml
 # - kyc-service.yml
-# - namespace.yml
+- namespace.yml
 # - notification-deployment.yml
 # - notification-service.yml
 # - production-issuer.yml
