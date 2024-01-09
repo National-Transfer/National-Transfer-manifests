@@ -34,31 +34,31 @@ resources:
 images:
 - name: redahimmi/national-transfer-account-service
   newName: redahimmi/national-transfer-account-service
-  newTag: 9d667f597fca5d3a29cd02be19f01e1508f9dbfb
+  newTag: 875a71459e79f1366da5209e8bec04b84be058d0
 - name: redahimmi/national-transfer-agency-service
   newName: redahimmi/national-transfer-agency-service
-  newTag: 9d667f597fca5d3a29cd02be19f01e1508f9dbfb
+  newTag: 875a71459e79f1366da5209e8bec04b84be058d0
 - name: redahimmi/national-transfer-api-gateway
   newName: redahimmi/national-transfer-api-gateway
-  newTag: 9d667f597fca5d3a29cd02be19f01e1508f9dbfb
+  newTag: 875a71459e79f1366da5209e8bec04b84be058d0
 - name: redahimmi/national-transfer-batch-service
   newName: redahimmi/national-transfer-batch-service
-  newTag: 9d667f597fca5d3a29cd02be19f01e1508f9dbfb
+  newTag: 875a71459e79f1366da5209e8bec04b84be058d0
 - name: redahimmi/national-transfer-charge-service
   newName: redahimmi/national-transfer-charge-service
-  newTag: 9d667f597fca5d3a29cd02be19f01e1508f9dbfb
+  newTag: 875a71459e79f1366da5209e8bec04b84be058d0
 - name: redahimmi/national-transfer-config-server
   newName: redahimmi/national-transfer-config-server
-  newTag: 9d667f597fca5d3a29cd02be19f01e1508f9dbfb
+  newTag: 875a71459e79f1366da5209e8bec04b84be058d0
 - name: redahimmi/national-transfer-fraud-service
   newName: redahimmi/national-transfer-fraud-service
-  newTag: 9d667f597fca5d3a29cd02be19f01e1508f9dbfb
+  newTag: 875a71459e79f1366da5209e8bec04b84be058d0
 - name: redahimmi/national-transfer-kyc-service
   newName: redahimmi/national-transfer-kyc-service
-  newTag: 9d667f597fca5d3a29cd02be19f01e1508f9dbfb
+  newTag: 875a71459e79f1366da5209e8bec04b84be058d0
 - name: redahimmi/national-transfer-notification-service
   newName: redahimmi/national-transfer-notification-service
-  newTag: 9d667f597fca5d3a29cd02be19f01e1508f9dbfb
+  newTag: 875a71459e79f1366da5209e8bec04b84be058d0
 - name: redahimmi/national-transfer-transfer-service
   newName: redahimmi/national-transfer-transfer-service
-  newTag: 9d667f597fca5d3a29cd02be19f01e1508f9dbfb
+  newTag: 875a71459e79f1366da5209e8bec04b84be058d0
