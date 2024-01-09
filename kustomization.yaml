@@ -3,8 +3,8 @@ kind: Kustomization
 resources:
 - account-deployment.yml
 - account-service.yml
-# - agency-deployment.yml
-# - agency-service.yml
+- agency-deployment.yml
+- agency-service.yml
 - api-gateway-deployment.yml
 - api-gateway-service.yml
 # - batch-deployment.yml

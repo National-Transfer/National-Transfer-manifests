@@ -48,8 +48,8 @@ spec:
           
           - name: "SPRING_CONFIG_IMPORT"
             value: "optional:configserver:http://config:secret@config-server.prod"
-          - name: "SPRING_PROFILES_ACTIVE"
-            value: "dev"
+          # - name: "SPRING_PROFILES_ACTIVE"
+          #   value: "dev"
 
         resources:
           limits:
