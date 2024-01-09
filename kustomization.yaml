@@ -1,33 +1,33 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- account-deployment.yml
-- account-service.yml
-- agency-deployment.yml
-- agency-service.yml
-- api-gateway-deployment.yml
-- api-gateway-service.yml
-- batch-deployment.yml
-- batch-service.yml
-- charge-deployment.yml
-- charge-service.yml
+# - account-deployment.yml
+# - account-service.yml
+# - agency-deployment.yml
+# - agency-service.yml
+# - api-gateway-deployment.yml
+# - api-gateway-service.yml
+# - batch-deployment.yml
+# - batch-service.yml
+# - charge-deployment.yml
+# - charge-service.yml
 - configserver-deployment.yml
 - configserver-service.yml
-- databaseSecret.yml
+# - databaseSecret.yml
 # - discoveryserver.yml
-- fraud-deployment.yml
-- fraud-service.yml
-- gab-deployment.yml
-- gab-service.yml
-- ingress.yml
-- kyc-deployment.yml
-- kyc-service.yml
-- namespace.yml
-- notification-deployment.yml
-- notification-service.yml
-- production-issuer.yml
-- rabbitmq-deployment.yml
-- rabbitmq-service.yml
-- staging-issuer.yml
-- transfer-deployment.yml
-- transfer-service.yml
+# - fraud-deployment.yml
+# - fraud-service.yml
+# - gab-deployment.yml
+# - gab-service.yml
+# - ingress.yml
+# - kyc-deployment.yml
+# - kyc-service.yml
+# - namespace.yml
+# - notification-deployment.yml
+# - notification-service.yml
+# - production-issuer.yml
+# - rabbitmq-deployment.yml
+# - rabbitmq-service.yml
+# - staging-issuer.yml
+# - transfer-deployment.yml
+# - transfer-service.yml
